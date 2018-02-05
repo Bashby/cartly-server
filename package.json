@@ -1,0 +1,21 @@
+{
+  "name": "cartlyserver",
+  "version": "0.1.0",
+  "description": "Server-side/backend logic for CartlyIO.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/cartlyio/cartlyserver.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "postgres"
+  ],
+  "author": "Brendan Evans Ashby",
+  "license": "UNLICENSED",
+  "homepage": "https://bitbucket.org/cartlyio/cartlyserver#readme"
+}
