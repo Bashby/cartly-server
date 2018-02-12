@@ -4,7 +4,11 @@
   "description": "Server-side/backend logic for CartlyIO.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require babel-register --exit",
+    "start": "nodemon app/app.js --exec babel-node",
+    "start:docker": "nodemon app/app.js --exec babel-node --legacy-watch",
+    "build": "babel app -d build",
+    "serve": "node build/app.js"
   },
   "repository": {
     "type": "git",
@@ -17,5 +21,17 @@
   ],
   "author": "Brendan Evans Ashby",
   "license": "UNLICENSED",
-  "homepage": "https://bitbucket.org/cartlyio/cartlyserver#readme"
+  "homepage": "https://bitbucket.org/cartlyio/cartlyserver#readme",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "express": "^4.16.2",
+    "pg-promise": "^7.4.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "mocha": "^5.0.0",
+    "nodemon": "^1.14.12"
+  }
 }
