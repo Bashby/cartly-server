@@ -22,6 +22,7 @@ const logger = new winston.Logger({
 });
 
 let app = express()
+app.disable('x-powered-by');
 
 ////////////////
 // Middleware //
