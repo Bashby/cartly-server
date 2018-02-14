@@ -1,8 +1,11 @@
--- Load extensions
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-
 -- Create database
-CREATE DATABASE cartly;
+CREATE DATABASE IF NOT EXISTS cartly;
+
+-- Connect to database
+\connect cartly
+
+-- Load database extensions
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 -----------------------
 -- referenced tables --

@@ -1,16 +1,8 @@
+// Local imports
+const queries = require('./queries');
 
+/////////////
+// Exports //
+/////////////
 
-
-import Editable from './Editable.jsx';
-
-export default Editable;
-
-
-
-module.exports = {
-    getAllStarships: getAllStarships,
-    getStarship: getStarship,
-    createStarship: createStarship,
-    updateStarship: updateStarship,
-    removeStarship: removeStarship
-};
+module.exports = queries
