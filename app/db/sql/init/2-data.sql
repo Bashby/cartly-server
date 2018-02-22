@@ -1,5 +1,5 @@
 -- connect to database
-\connect cartly
+\connect bodego
 
 -- Insert into table 'address'
 INSERT INTO address
@@ -83,19 +83,37 @@ INSERT INTO item
 )
 VALUES
 (
- 'Test Item 1', 'Carrot'
+ 'Carrot', 'This is a delicious carrot.'
 ),
 (
- 'Test Item 2', 'Apple'
+ 'Carrott', 'This is misspelled'
 ),
 (
- 'Test Item 3', 'Banana'
+ 'Carrot Pie', 'This is multiword'
 ),
 (
- 'Test Item 4', 'Pancake'
+ 'Carrott Pie', 'This is misspelled, and multi word'
 ),
 (
- 'Test Item 5', 'Peach'
+ 'Test Item 1', 'Only description. Carrot carrot carrot carrot!!!'
+),
+(
+ 'Chicken', 'blahs blahh'
+),
+(
+ 'Chicken Soup', 'blahs blahh'
+),
+(
+ 'Chicken Broth', 'blahs blahh'
+),
+(
+ 'Water Melon', 'Yep, not a carrot or chicken'
+),
+(
+ 'Watermelon', 'one word! Yep, not a carrot or chicken'
+),
+(
+ 'Vegetable', 'This includes things like carrots, but not chicken'
 );
 
 

@@ -1,7 +1,7 @@
 {
-  "name": "cartlyserver",
+  "name": "bodegoserver",
   "version": "0.1.0",
-  "description": "Server-side/backend logic for CartlyIO.",
+  "description": "Server-side/backend logic for BodegoIO.",
   "main": "server.js",
   "scripts": {
     "test": "mocha --require babel-register --exit",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/cartlyio/cartlyserver.git"
+    "url": "git+ssh://git@bitbucket.org/bodegoio/bodegoserver.git"
   },
   "keywords": [
     "nodejs",
@@ -23,7 +23,7 @@
   ],
   "author": "Brendan Evans Ashby",
   "license": "UNLICENSED",
-  "homepage": "https://bitbucket.org/cartlyio/cartlyserver#readme",
+  "homepage": "https://bitbucket.org/bodegoio/bodegoserver#readme",
   "dependencies": {
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",

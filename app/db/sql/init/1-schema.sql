@@ -1,11 +1,12 @@
 -- Create database
-CREATE DATABASE cartly;
+CREATE DATABASE bodego;
 
 -- Connect to database
-\connect cartly
+\connect bodego
 
 -- Load database extensions
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE EXTENSION IF NOT EXISTS "pg_trgm";
 
 -----------------------
 -- referenced tables --

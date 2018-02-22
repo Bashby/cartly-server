@@ -1,8 +1,5 @@
 // Local imports
-const queries = require('./queries');
+const db = require('./connection');
 
-/////////////
-// Exports //
-/////////////
 
-module.exports = queries
+module.exports = db;

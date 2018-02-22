@@ -67,4 +67,4 @@ app.set("env", process.env.NODE_ENV || "development");
 app.set("host", process.env.HOST || "0.0.0.0");
 app.set("port", process.env.PORT || 8080);
 
-app.listen(app.get("port"), () => logger.info('Cartly Server started. Listening on port ' + app.get("port") + '.'))
+app.listen(app.get("port"), () => logger.info('bodego server started. Listening on port ' + app.get("port") + '.'))

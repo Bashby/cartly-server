@@ -3,7 +3,7 @@ version: "3"
 networks:
   default:
     external:
-      name: cartly-dev-network
+      name: bodego-dev-network
 
 services:
   postgres:
@@ -13,11 +13,11 @@ services:
     ports:
       - 5432:5432
     environment:
-      - POSTGRES_PASSWORD=cartlydb
+      - POSTGRES_PASSWORD=bodegodb
     volumes:
-      - ../app/db/sql/:/docker-entrypoint-initdb.d/
-  cartlyserver:
-    container_name: cartlyserver
+      - ../app/db/sql/init/:/docker-entrypoint-initdb.d/
+  bodegoserver:
+    container_name: bodegoserver
     build:
       context: ..
       dockerfile: ./Dockerfile

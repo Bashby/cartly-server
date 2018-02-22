@@ -1,6 +1,6 @@
-# CartlyIO Server
+# BodegoIO Server
 
-The server side logic (NodeJS/Express/PostgreSQL) for CartlyIO.
+The server side logic (NodeJS/Express/PostgreSQL) for BodegoIO.
 
 ## Getting started
 
