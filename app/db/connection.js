@@ -25,7 +25,7 @@ const connectionConfig = {
     host: 'postgres',
     port: 5432,
     database: 'bodego',
-    user: 'postgres',
+    user: 'bodego_db_docker_user',
     password: 'bodegodb'
 };
 const db = pgp(connectionConfig);

@@ -4,16 +4,19 @@ const morgan = require('morgan')
 const winston = require('winston')
 const bodyParser = require('body-parser')
 const cors = require('cors')
+var path = require('path')
+var serveStatic = require('serve-static')
 
 // Local Imports
 const api = require('./api');
 
-const level = process.env.LOG_LEVEL || 'debug';
+
+const LOG_LEVEL = process.env.LOG_LEVEL || 'debug';
 
 const logger = new winston.Logger({
     transports: [
         new winston.transports.Console({
-            level: level,
+            level: LOG_LEVEL,
             timestamp: function () {
                 return (new Date()).toISOString();
             }
@@ -52,6 +55,12 @@ var corsOptions = {
 }
 app.use(cors(corsOptions))
 app.options('*', cors(corsOptions))
+
+///////////////////
+// Static Assets //
+///////////////////
+
+app.use('/static', serveStatic(path.join(__dirname, 'public')));
 
 /////////////////
 // API Queries //

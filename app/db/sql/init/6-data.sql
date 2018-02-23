@@ -1,7 +1,8 @@
 -- connect to database
 \connect bodego
 
--- Insert into table 'address'
+
+-- address
 INSERT INTO address
 (
  line1, line2, city, state, postcode, country, geolocation, timezone, classification
@@ -12,7 +13,7 @@ VALUES
 );
 
 
--- Insert into table 'phone_number'
+-- phone_number
 INSERT INTO phone_number
 (
  phone_number, classification
@@ -23,7 +24,7 @@ VALUES
 );
 
 
--- Insert into table 'contact'
+-- contact
 INSERT INTO contact
 (
  email_address, url
@@ -34,7 +35,7 @@ VALUES
 );
 
 
--- Insert into table 'category'
+-- category
 INSERT INTO category
 (
  name
@@ -48,7 +49,7 @@ VALUES
 );
 
 
--- Insert into table 'retailer'
+-- retailer
 INSERT INTO retailer
 (
  name
@@ -62,7 +63,7 @@ VALUES
 );
 
 
--- Insert into table 'store'
+-- store
 INSERT INTO store
 (
  name, hours, rating
@@ -76,7 +77,7 @@ VALUES
 );
 
 
--- Insert into table 'item'
+-- item
 INSERT INTO item
 (
  name, description
@@ -117,7 +118,7 @@ VALUES
 );
 
 
--- Insert into table 'requisition'
+-- requisition
 INSERT INTO requisition
 (
  name
@@ -131,7 +132,7 @@ VALUES
 );
 
 
--- Insert into table 'customer'
+-- customer
 INSERT INTO customer
 (
  name
@@ -143,4 +144,3 @@ VALUES
 (
  'Test Customer 2'
 );
-
