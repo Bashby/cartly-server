@@ -23,8 +23,7 @@ CREATE TABLE address (
     postcode_plus_four VARCHAR(4),
     country VARCHAR(2) NOT NULL, -- ISO 3166-1 alpha-2 code
     geolocation POINT NOT NULL, -- lat long GPS position
-    timezone TEXT NOT NULL, -- e.g. America/New_York
-    timezone_offset TEXT NOT NULL, -- e.g. -6:00
+    timezone_name TEXT NOT NULL, -- e.g. America/New_York
     classification TEXT NOT NULL -- Physical, Billing, Shipping, CurbSidePickup
 );
 

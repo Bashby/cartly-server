@@ -5,11 +5,14 @@
 -- address
 INSERT INTO address
 (
- line1, line2, city, state, postcode, country, geolocation, timezone, classification
+ line1, line2, city, state, postcode, postcode_plus_four, country, geolocation, timezone, classification
 )
 VALUES
 (
- '200 Johnson Base', 'APT 415', 'Austin', 'TX', '78701', 'US', point(1.0, 1.0), 'America/Chica', 'Shipping'
+ '200 Johnson Base', 'APT 415', 'Austin', 'TX', '78701', 'US', point(1.0, 1.0), 'America/Chicago', 'Shipping'
+),
+(
+ '51 Jockey Hollow Street ', 'Ste. 55', 'Hummelstown', 'PA', '17036', 'US', point(2.0, 2.0), 'America/Chicago'
 );
 
 
