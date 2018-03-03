@@ -24,6 +24,7 @@ CREATE TABLE address (
     country VARCHAR(2) NOT NULL, -- ISO 3166-1 alpha-2 code
     geolocation POINT NOT NULL, -- lat long GPS position
     timezone TEXT NOT NULL, -- e.g. America/New_York
+    timezone_offset TEXT NOT NULL, -- e.g. -6:00
     classification TEXT NOT NULL -- Physical, Billing, Shipping, CurbSidePickup
 );
 
@@ -50,18 +51,18 @@ CREATE TABLE contact (
     id SERIAL PRIMARY KEY,
     uuid UUID NOT NULL DEFAULT uuid_generate_v4(),
     created timestamptz NOT NULL DEFAULT now(),
-    created_by text,
+    created_by TEXT,
     last_modified timestamptz,
-    last_modified_by text,
+    last_modified_by TEXT,
     deleted timestamptz,
-    deleted_by text,
+    deleted_by TEXT,
 
     -- table columns
-    -- phone_number TEXT,
-    -- fax_number TEXT,
     email_address TEXT,
-    url TEXT
-    -- physical_address INTEGER REFERENCES address (id)
-    -- shipping_address INTEGER REFERENCES address (id)
-    -- pickup_address INTEGER REFERENCES address (id)
+    home_page_url TEXT
+    -- phone_number INTEGER REFERENCES phone_number (id),
+    -- fax_number INTEGER REFERENCES phone_number (id),
+    -- physical_address INTEGER REFERENCES address (id),
+    -- shipping_address INTEGER REFERENCES address (id),
+    -- curbside_pickup_address INTEGER REFERENCES address (id)
 );

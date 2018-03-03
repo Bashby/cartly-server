@@ -4,8 +4,9 @@ const morgan = require('morgan')
 const winston = require('winston')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-var path = require('path')
-var serveStatic = require('serve-static')
+const path = require('path')
+const serveStatic = require('serve-static')
+const cookieParser = require('cookie-parser')
 
 // Local Imports
 const api = require('./api');
@@ -43,8 +44,11 @@ app.use(morgan(app.get("env") === "production" ? "combined" : "dev", {
     }, stream: process.stdout
 }));
 
+// parse cookies
+app.use(cookieParser())
+
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
 
 // parse application/json
 app.use(bodyParser.json())

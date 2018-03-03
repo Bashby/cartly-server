@@ -2,22 +2,6 @@
 \connect bodego
 
 
--- category
-CREATE TABLE category (
-    -- base columns
-    id SERIAL PRIMARY KEY,
-    uuid UUID NOT NULL DEFAULT uuid_generate_v4(),
-    created timestamptz NOT NULL DEFAULT now(),
-    created_by text,
-    last_modified timestamptz,
-    last_modified_by text,
-    deleted timestamptz,
-    deleted_by text,
-
-    -- table columns
-    name TEXT NOT NULL
-);
-
 -- retailer
 CREATE TABLE retailer (
     -- base columns
@@ -31,7 +15,10 @@ CREATE TABLE retailer (
     deleted_by text,
 
     -- table columns
-    name TEXT NOT NULL
+    name TEXT NOT NULL,
+    logo TEXT,
+    primary_color TEXT,
+    secondary_color TEXT
 );
 
 -- store
@@ -48,10 +35,11 @@ CREATE TABLE store (
 
     -- table columns
     name TEXT NOT NULL,
+    address INTEGER REFERENCES address(id),
     contact INTEGER REFERENCES contact(id),
     retailer INTEGER REFERENCES retailer(id),
-    hours TEXT,
-    rating TEXT
+    hours TEXT[7][2], -- 2d array, 7 days with 2 times, opening and closing
+    tax_rate INTEGER
 );
 
 -- item
@@ -73,6 +61,22 @@ CREATE TABLE item (
 
     -- search columns
     search_vector_item TSVECTOR
+);
+
+-- category
+CREATE TABLE category (
+    -- base columns
+    id SERIAL PRIMARY KEY,
+    uuid UUID NOT NULL DEFAULT uuid_generate_v4(),
+    created timestamptz NOT NULL DEFAULT now(),
+    created_by text,
+    last_modified timestamptz,
+    last_modified_by text,
+    deleted timestamptz,
+    deleted_by text,
+
+    -- table columns
+    name TEXT NOT NULL
 );
 
 -- requisition
